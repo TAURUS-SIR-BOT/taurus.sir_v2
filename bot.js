@@ -1,3 +1,4 @@
+
 /* Copyright (C) 2020 Yusuf Usta.
 
 Licensed under the  GPL-3.0 License;
@@ -12,7 +13,7 @@ const events = require("./events");
 const chalk = require('chalk');
 const config = require('./config');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
-const {Message, StringSession, Image, Video} = require('./julie/');
+const {Message, StringSession, Image, Video} = require('./TAURUS/');
 const { DataTypes } = require('sequelize');
 const { getMessage } = require("./plugins/sql/greetings");
 const axios = require('axios');
@@ -136,7 +137,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
         });
 
         console.log(
-            chalk.green.bold('✅ Julie Mwol working!')
+            chalk.green.bold('✅ TAURUS-SIR-BOT working!')
         );
         await new Promise(r => setTimeout(r, 1100));
 
@@ -270,7 +271,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
                 var pinkjson = await conn.groupMetadata(msg.key.remoteJid)
                    await conn.sendMessage(msg.key.remoteJid,gb.message.replace('{gphead}', pinkjson.subject).replace('{gpmaker}', pinkjson.owner).replace('{gpdesc}', pinkjson.desc).replace('{owner}', conn.user.name), MessageType.text);
             }
-          }  //thanks to farhan      
+          }  //thanks to TAURUS-SIR-OFFICIAL      
             return;
         } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
             // welcome
