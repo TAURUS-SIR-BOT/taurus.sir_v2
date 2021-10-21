@@ -1,4 +1,4 @@
-const Julie = require("../events");
+const taurus.sir_v2 = require("../events");
 const Config = require("../config");
 const fs = require('fs');
 
@@ -8,7 +8,7 @@ if (Config.WORKTYPE == 'private') {
     { pattern: "help ?(.*)", fromMe: true, dontAddCommandList: true },
     async (message, match) => {
       let CMD_HELP = "";
-      Julie.commands.map(async (command) => {
+      taurus.sir_v2.commands.map(async (command) => {
         if (
           command.dontAddCommandList === false &&
           command.pattern !== undefined
